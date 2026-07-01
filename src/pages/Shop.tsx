@@ -8,6 +8,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { Filters, type FilterState } from "@/components/product/Filters";
 import { Button } from "@/components/ui/Button";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedAura } from "@/components/three/CursedAura";
+import { BloodDrops } from "@/components/three/BloodDrops";
 
 const PAGE_SIZE = 9;
 
@@ -59,6 +62,10 @@ export default function Shop() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <SceneBackground fixed tone="mixed" intensity={0.4} overlay={false}>
+        <CursedAura count={22} scale={6} />
+        <BloodDrops count={6} area={7} />
+      </SceneBackground>
       <SectionHeading
         eyebrow="Catalog"
         jp="ショップ"

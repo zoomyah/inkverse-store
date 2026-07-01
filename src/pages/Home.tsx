@@ -12,6 +12,13 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpeedLines } from "@/components/ui/SpeedLines";
 import { Halftone } from "@/components/ui/Halftone";
 import { KatanaScene } from "@/components/three/KatanaScene";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedAura } from "@/components/three/CursedAura";
+import { BloodDrops } from "@/components/three/BloodDrops";
+import { FloatingShuriken } from "@/components/three/FloatingShuriken";
+import { CursedSeal } from "@/components/three/CursedSeal";
+import { SlashEffect } from "@/components/three/SlashEffect";
+import { CherryBlossom3D } from "@/components/three/CherryBlossom3D";
 import { ProductCard } from "@/components/product/ProductCard";
 import { BurstBadge } from "@/components/ui/BurstBadge";
 import { Badge } from "@/components/ui/Badge";
@@ -121,15 +128,19 @@ export default function Home() {
       </section>
 
       {/* ===== CATEGORIES ===== */}
-      <Container className="py-16 sm:py-24">
+      <Container className="relative py-16 sm:py-24">
+        <SceneBackground tone="purple" intensity={0.45}>
+          <CursedSeal position={[-2.4, 0.6, -1]} scale={2.2} spin={0.12} />
+          <CursedAura count={26} scale={5} />
+        </SceneBackground>
         <SectionHeading
           eyebrow="Browse"
           jp="カテゴリー"
           title="Find your obsession"
           subtitle="Six worlds of collectibles — pick your panel."
-          className="mb-10"
+          className="relative mb-10"
         />
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="relative grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {(categories.length ? categories : []).map((c, i) => (
             <motion.div
               key={c.category}
@@ -168,6 +179,10 @@ export default function Home() {
 
       {/* ===== FEATURED ===== */}
       <section className="relative py-16 sm:py-24 border-y-2 border-black bg-ink-deep">
+        <SceneBackground tone="blood" intensity={0.5} overlay={false}>
+          <BloodDrops count={9} area={6} />
+          <CursedAura count={24} scale={5} />
+        </SceneBackground>
         <Halftone opacity={0.15} />
         <Container className="relative">
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -194,7 +209,11 @@ export default function Home() {
       </section>
 
       {/* ===== NEW ARRIVALS ===== */}
-      <Container className="py-16 sm:py-24">
+      <Container className="relative py-16 sm:py-24">
+        <SceneBackground tone="blood" intensity={0.35} overlay={false}>
+          <CherryBlossom3D count={16} area={7} />
+        </SceneBackground>
+        <div className="relative">
         <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
           <SectionHeading eyebrow="Fresh" jp="新着" title="New arrivals" />
           <Link to="/shop?sort=newest">
@@ -208,12 +227,17 @@ export default function Home() {
             <ProductCard key={p.id} product={p} index={i} />
           ))}
         </div>
+        </div>
       </Container>
 
       {/* ===== SALE BANNER ===== */}
       <Container className="pb-16 sm:pb-24">
         <div className="relative overflow-hidden manga-panel manga-panel-neon p-8 sm:p-12">
           <SpeedLines tone="blood" className="opacity-40" />
+          <SceneBackground tone="blood" intensity={0.7} overlay={false}>
+            <SlashEffect scale={1.1} speed={2.6} />
+            <CursedAura count={30} scale={4} speed={0.5} />
+          </SceneBackground>
           <Halftone opacity={0.2} />
           <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -241,6 +265,11 @@ export default function Home() {
       {/* ===== NEWSLETTER ===== */}
       <Container className="pb-24">
         <div className="relative overflow-hidden manga-panel p-8 sm:p-12 text-center">
+          <SceneBackground tone="purple" intensity={0.5} overlay={false}>
+            <CursedSeal position={[2.6, 0.4, -1]} scale={1.8} spin={0.15} />
+            <FloatingShuriken position={[-2.8, 1.1, 0]} scale={0.7} />
+            <FloatingShuriken position={[2.4, -1.2, 0]} scale={0.5} spin={0.9} />
+          </SceneBackground>
           <Halftone opacity={0.18} />
           <div className="relative max-w-xl mx-auto">
             <Star size={28} className="fill-manga-gold text-manga-gold mx-auto mb-3" />

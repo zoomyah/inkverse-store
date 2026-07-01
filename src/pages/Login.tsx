@@ -7,6 +7,9 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Halftone } from "@/components/ui/Halftone";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedSeal } from "@/components/three/CursedSeal";
+import { CursedAura } from "@/components/three/CursedAura";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -26,6 +29,10 @@ export default function Login() {
 
   return (
     <Container className="py-14 max-w-md">
+      <SceneBackground fixed tone="purple" intensity={0.45} overlay={false}>
+        <CursedSeal position={[0, 0, -1.5]} scale={2.2} spin={0.1} />
+        <CursedAura count={20} scale={5} />
+      </SceneBackground>
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

@@ -13,6 +13,8 @@ import { PaymentElement } from "@/components/checkout/PaymentElement";
 import { OrderSummary } from "@/components/checkout/OrderSummary";
 import { Steps, type Step } from "@/components/checkout/Steps";
 import { hasStripe } from "@/utils/stripe";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedAura } from "@/components/three/CursedAura";
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -99,6 +101,9 @@ export default function Checkout() {
 
   return (
     <Container className="py-10 sm:py-14 max-w-6xl">
+      <SceneBackground fixed tone="blood" intensity={0.4} overlay={false}>
+        <CursedAura count={24} scale={6} />
+      </SceneBackground>
       <div className="mb-8">
         <h1 className="display-tight text-4xl sm:text-5xl uppercase">Checkout</h1>
         <p className="font-jp text-cyan-neon text-xs mt-1 neon-text-cyan">決済</p>

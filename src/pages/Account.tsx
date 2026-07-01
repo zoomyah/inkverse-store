@@ -8,6 +8,9 @@ import { formatCurrency, formatDate } from "@/utils/format";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedSeal } from "@/components/three/CursedSeal";
+import { CherryBlossom3D } from "@/components/three/CherryBlossom3D";
 
 const statusTone = {
   pending: "gold",
@@ -48,6 +51,10 @@ export default function Account() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <SceneBackground fixed tone="purple" intensity={0.4} overlay={false}>
+        <CursedSeal position={[2.8, 0.5, -1]} scale={1.8} spin={0.12} />
+        <CherryBlossom3D count={12} area={7} />
+      </SceneBackground>
       <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
         <div>
           <p className="katakana-eyebrow text-[11px] text-blood-neon">Account</p>

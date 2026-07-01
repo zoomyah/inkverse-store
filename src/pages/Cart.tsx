@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CartLineRow } from "@/components/cart/CartLine";
 import { CartSummary } from "@/components/cart/CartSummary";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CherryBlossom3D } from "@/components/three/CherryBlossom3D";
 
 export default function Cart() {
   const items = useCartStore((s) => s.items);
@@ -44,6 +46,9 @@ export default function Cart() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <SceneBackground fixed tone="blood" intensity={0.35} overlay={false}>
+        <CherryBlossom3D count={14} area={7} />
+      </SceneBackground>
       <SectionHeading
         eyebrow="Your cart"
         jp="カート"

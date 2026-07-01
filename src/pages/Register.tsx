@@ -7,6 +7,9 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Halftone } from "@/components/ui/Halftone";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { CursedAura } from "@/components/three/CursedAura";
+import { CherryBlossom3D } from "@/components/three/CherryBlossom3D";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -25,6 +28,10 @@ export default function Register() {
 
   return (
     <Container className="py-14 max-w-md">
+      <SceneBackground fixed tone="blood" intensity={0.4} overlay={false}>
+        <CursedAura count={20} scale={5} />
+        <CherryBlossom3D count={12} area={6} />
+      </SceneBackground>
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

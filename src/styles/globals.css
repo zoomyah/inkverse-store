@@ -52,6 +52,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* Enhance the 3D feel for CSS transforms layered over WebGL scenes. */
+  perspective: 1200px;
 }
 
 ::selection {

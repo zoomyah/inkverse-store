@@ -8,6 +8,9 @@ import { formatCurrency, formatDateTime } from "@/utils/format";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { FloatingShuriken } from "@/components/three/FloatingShuriken";
+import { CursedAura } from "@/components/three/CursedAura";
 
 const statusTone: Record<OrderStatus, "neon" | "cyan" | "gold" | "muted"> = {
   pending: "gold",
@@ -52,6 +55,10 @@ export default function OrderPage() {
 
   return (
     <Container className="py-10 sm:py-14 max-w-3xl">
+      <SceneBackground fixed tone="mixed" intensity={0.4} overlay={false}>
+        <FloatingShuriken position={[3, 1.5, 0]} scale={0.5} />
+        <CursedAura count={20} scale={6} />
+      </SceneBackground>
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}

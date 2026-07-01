@@ -16,6 +16,9 @@ import { Gallery } from "@/components/product/Gallery";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { CATEGORY_LABELS } from "@/api/types";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { FloatingShuriken } from "@/components/three/FloatingShuriken";
+import { CursedSeal } from "@/components/three/CursedSeal";
 
 export default function ProductPage() {
   const { slug } = useParams();
@@ -82,6 +85,11 @@ export default function ProductPage() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <SceneBackground fixed tone="purple" intensity={0.45} overlay={false}>
+        <CursedSeal position={[0, 0, -1.5]} scale={2.4} spin={0.1} />
+        <FloatingShuriken position={[2.8, 1.2, 0]} scale={0.6} />
+        <FloatingShuriken position={[-2.8, -1.2, 0]} scale={0.5} spin={0.9} />
+      </SceneBackground>
       <Link
         to="/shop"
         className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-muted hover:text-blood-neon mb-6 transition-colors"

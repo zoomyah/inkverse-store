@@ -8,6 +8,8 @@ import { Container } from "@/components/ui/Container";
 import { StatCard } from "@/components/admin/StatCard";
 import { SalesChart, type SalesPoint } from "@/components/admin/SalesChart";
 import { Button } from "@/components/ui/Button";
+import { SceneBackground } from "@/components/three/SceneBackground";
+import { FloatingShuriken } from "@/components/three/FloatingShuriken";
 
 export default function Admin() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -48,6 +50,10 @@ export default function Admin() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <SceneBackground fixed tone="mixed" intensity={0.35} overlay={false}>
+        <FloatingShuriken position={[3, 1.5, 0]} scale={0.6} />
+        <FloatingShuriken position={[-3, -1.5, 0]} scale={0.5} spin={0.9} />
+      </SceneBackground>
       <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
         <div>
           <p className="katakana-eyebrow text-[11px] text-cyan-neon">Admin · 管理者</p>

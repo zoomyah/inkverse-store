@@ -14,11 +14,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-sakura-neon text-white border-2 border-black hover:bg-sakura-deep hover:shadow-neon-pink active:translate-y-0.5",
+    "bg-blood-neon text-white border-2 border-black hover:bg-blood-deep hover:shadow-neon-blood active:translate-y-0.5",
   secondary:
-    "bg-transparent text-ink-text border-2 border-ink-text hover:border-sakura-neon hover:text-sakura-neon active:translate-y-0.5",
+    "bg-transparent text-ink-text border-2 border-ink-text hover:border-blood-neon hover:text-blood-neon active:translate-y-0.5",
   ghost:
-    "bg-transparent text-ink-muted border-2 border-transparent hover:text-sakura-neon",
+    "bg-transparent text-ink-muted border-2 border-transparent hover:text-blood-neon",
   gold:
     "bg-manga-gold text-black border-2 border-black hover:brightness-95 hover:shadow-neon-gold active:translate-y-0.5",
   cyan:
@@ -41,7 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       className={cn(
         "relative inline-flex items-center justify-center gap-2 font-sans font-700 uppercase",
         "transition-all duration-150 select-none disabled:opacity-50 disabled:pointer-events-none",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sakura-neon focus-visible:ring-offset-2 focus-visible:ring-offset-ink-base",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blood-neon focus-visible:ring-offset-2 focus-visible:ring-offset-ink-base",
         variants[variant],
         sizes[size],
         clip && variant === "primary" && "clip-action",

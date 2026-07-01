@@ -84,7 +84,7 @@ export default function ProductPage() {
     <Container className="py-10 sm:py-14">
       <Link
         to="/shop"
-        className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-muted hover:text-sakura-neon mb-6 transition-colors"
+        className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-muted hover:text-blood-neon mb-6 transition-colors"
       >
         <ArrowLeft size={14} /> Back to shop
       </Link>
@@ -132,7 +132,7 @@ export default function ProductPage() {
 
           {/* Price */}
           <div className="flex items-baseline gap-3 mt-6">
-            <span className="font-display text-4xl text-sakura-neon neon-text">
+            <span className="font-display text-4xl text-blood-neon neon-text-blood">
               {formatCurrency(product.price)}
             </span>
             {onSale && (
@@ -148,7 +148,7 @@ export default function ProductPage() {
           {/* Stock */}
           <div className="flex items-center gap-2 mt-3 text-xs">
             <Package size={14} className="text-cyan-neon" />
-            <span className={product.stock > 0 ? "text-cyan-neon" : "text-sakura-neon"}>
+            <span className={product.stock > 0 ? "text-cyan-neon" : "text-blood-neon"}>
               {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
             </span>
           </div>
@@ -161,7 +161,7 @@ export default function ProductPage() {
             <div className="flex items-center border-2 border-black bg-ink-deep">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}
-                className="p-3 text-ink-muted hover:text-sakura-neon transition-colors"
+                className="p-3 text-ink-muted hover:text-blood-neon transition-colors"
                 aria-label="Decrease"
               >
                 <Minus size={16} />
@@ -169,7 +169,7 @@ export default function ProductPage() {
               <span className="w-12 text-center font-mono text-ink-text">{qty}</span>
               <button
                 onClick={() => setQty((q) => Math.min(product.stock, q + 1))}
-                className="p-3 text-ink-muted hover:text-sakura-neon transition-colors"
+                className="p-3 text-ink-muted hover:text-blood-neon transition-colors"
                 aria-label="Increase"
               >
                 <Plus size={16} />
@@ -214,7 +214,7 @@ export default function ProductPage() {
         <section className="mt-20">
           <div className="flex items-end justify-between mb-6">
             <div>
-              <p className="katakana-eyebrow text-[11px] text-sakura-neon">Same series</p>
+              <p className="katakana-eyebrow text-[11px] text-blood-neon">Same series</p>
               <h2 className="display-tight text-3xl uppercase mt-1">More from {product.series}</h2>
             </div>
             <Link to={`/shop?series=${encodeURIComponent(product.series)}`}>

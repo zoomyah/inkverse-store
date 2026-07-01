@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 type BurstTone = "sale" | "new" | "gold";
 
 const tones: Record<BurstTone, { bg: string; text: string; label: string }> = {
-  sale: { bg: "bg-sakura-neon", text: "text-white", label: "SALE" },
+  sale: { bg: "bg-blood-neon", text: "text-white", label: "SALE" },
   new: { bg: "bg-cyan-neon", text: "text-black", label: "NEW" },
   gold: { bg: "bg-manga-gold", text: "text-black", label: "POW" },
 };
@@ -40,7 +40,7 @@ export function BurstBadge({
       style={{
         width: 64,
         height: 64,
-        boxShadow: "0 0 18px rgba(255,46,99,0.45)",
+        boxShadow: "0 0 18px rgba(220,20,60,0.5)",
         ...style,
       }}
     >

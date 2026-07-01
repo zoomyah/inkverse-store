@@ -33,7 +33,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link to="/" className="display-tight text-3xl">
               <span className="text-ink-text">INK</span>
-              <span className="text-sakura-neon neon-text">VERSE</span>
+              <span className="text-blood-neon neon-text-blood">VERSE</span>
             </Link>
             <p className="font-jp text-cyan-neon text-xs mt-2 neon-text-cyan">
               アニメ & マンガ マーケットプレース
@@ -49,7 +49,7 @@ export function Footer() {
                   key={i}
                   href="#"
                   aria-label="social"
-                  className="p-2 border-2 border-black bg-ink-raised text-ink-muted hover:text-sakura-neon hover:border-sakura-neon shadow-manga-sm transition-colors"
+                  className="p-2 border-2 border-black bg-ink-raised text-ink-muted hover:text-blood-neon hover:border-blood-neon shadow-manga-sm transition-colors"
                 >
                   <Icon size={16} />
                 </a>
@@ -60,7 +60,7 @@ export function Footer() {
           {/* Link columns */}
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="katakana-eyebrow text-[11px] text-sakura-neon mb-4">
+              <h4 className="katakana-eyebrow text-[11px] text-blood-neon mb-4">
                 {col.title}
               </h4>
               <ul className="flex flex-col gap-2.5">

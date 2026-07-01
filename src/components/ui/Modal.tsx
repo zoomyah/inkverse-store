@@ -58,7 +58,7 @@ export function Modal({ open, onClose, title, children, className, size = "md" }
             <button
               onClick={onClose}
               aria-label="Close"
-              className="absolute top-3 right-3 p-1.5 text-ink-muted hover:text-sakura-neon hover:bg-white/5 transition-colors"
+              className="absolute top-3 right-3 p-1.5 text-ink-muted hover:text-blood-neon hover:bg-white/5 transition-colors"
             >
               <X size={20} />
             </button>

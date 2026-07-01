@@ -68,7 +68,7 @@ export function OrdersTable() {
             ) : (
               orders.map((o) => (
                 <tr key={o.id} className="border-b border-white/5 hover:bg-white/[0.02]">
-                  <td className="p-3 font-mono text-sakura-neon">{o.id}</td>
+                  <td className="p-3 font-mono text-blood-neon">{o.id}</td>
                   <td className="p-3">
                     <p className="text-ink-text">{o.customer.name}</p>
                     <p className="text-xs text-ink-muted">{o.customer.email}</p>

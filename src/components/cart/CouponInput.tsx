@@ -30,7 +30,7 @@ export function CouponInput() {
             removeCoupon();
             setMsg(null);
           }}
-          className="text-ink-muted hover:text-sakura-neon"
+          className="text-ink-muted hover:text-blood-neon"
           aria-label="Remove coupon"
         >
           <X size={16} />
@@ -51,11 +51,11 @@ export function CouponInput() {
           className="pl-9"
         />
       </div>
-      {msg && !msg.ok && <p className="text-xs text-sakura-neon">{msg.message}</p>}
+      {msg && !msg.ok && <p className="text-xs text-blood-neon">{msg.message}</p>}
       {msg && msg.ok && <p className="text-xs text-cyan-neon">{msg.message}</p>}
       <button
         type="submit"
-        className="w-full py-2.5 text-xs uppercase tracking-widest border-2 border-black bg-ink-raised text-ink-text hover:border-sakura-neon hover:text-sakura-neon transition-colors"
+        className="w-full py-2.5 text-xs uppercase tracking-widest border-2 border-black bg-ink-raised text-ink-text hover:border-blood-neon hover:text-blood-neon transition-colors"
       >
         Apply coupon
       </button>

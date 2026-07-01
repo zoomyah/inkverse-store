@@ -50,7 +50,7 @@ export function Gallery({ images, alt, name }: GalleryProps) {
               className={cn(
                 "aspect-square overflow-hidden border-2 transition-all",
                 active === i
-                  ? "border-sakura-neon shadow-neon-pink"
+                  ? "border-blood-neon shadow-neon-blood"
                   : "border-black opacity-60 hover:opacity-100"
               )}
             >

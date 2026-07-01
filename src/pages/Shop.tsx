@@ -131,7 +131,7 @@ export default function Shop() {
                       className={
                         "w-9 h-9 font-display text-sm border-2 border-black transition-colors " +
                         (n === page
-                          ? "bg-sakura-neon text-white shadow-neon-pink"
+                          ? "bg-blood-neon text-white shadow-neon-blood"
                           : "bg-ink-deep text-ink-muted hover:text-ink-text")
                       }
                     >

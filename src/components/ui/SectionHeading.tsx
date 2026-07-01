@@ -33,7 +33,7 @@ export function SectionHeading({
             <span className="font-jp text-cyan-neon text-xs neon-text-cyan">{jp}</span>
           )}
           {eyebrow && (
-            <span className="katakana-eyebrow text-[11px] text-sakura-neon">{eyebrow}</span>
+            <span className="katakana-eyebrow text-[11px] text-blood-neon">{eyebrow}</span>
           )}
         </div>
       )}

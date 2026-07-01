@@ -59,7 +59,7 @@ export default function Login() {
               required
             />
             {msg && (
-              <p className={msg.ok ? "text-xs text-cyan-neon" : "text-xs text-sakura-neon"}>
+              <p className={msg.ok ? "text-xs text-cyan-neon" : "text-xs text-blood-neon"}>
                 {msg.message}
               </p>
             )}
@@ -79,7 +79,7 @@ export default function Login() {
 
           <p className="text-center text-sm text-ink-muted mt-6">
             New here?{" "}
-            <Link to="/register" className="text-sakura-neon hover:underline">
+            <Link to="/register" className="text-blood-neon hover:underline">
               Create an account
             </Link>
           </p>

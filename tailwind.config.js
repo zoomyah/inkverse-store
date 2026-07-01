@@ -24,11 +24,21 @@ export default {
           muted: "#9A9AA5",
           border: "rgba(255,255,255,0.08)",
         },
-        sakura: {
-          neon: "#FF2E63",
-          DEFAULT: "#FF2E63",
-          deep: "#C71F4C",
+        blood: {
+          neon: "#DC143C",
+          DEFAULT: "#DC143C",
+          deep: "#7F1D1D",
         },
+        // Cursed-energy purple — used very sparingly in 3D accents (Jujutsu vibe).
+        curse: {
+          purple: "#6B21A8",
+          DEFAULT: "#6B21A8",
+        },
+        ember: {
+          neon: "#FF6B35",
+          DEFAULT: "#FF6B35",
+        },
+        // Cyan retained as a rare secondary accent only.
         cyan: {
           neon: "#00E5FF",
           DEFAULT: "#00E5FF",
@@ -49,9 +59,9 @@ export default {
         'manga': '6px 6px 0 0 #000000',
         'manga-sm': '3px 3px 0 0 #000000',
         'manga-lg': '10px 10px 0 0 #000000',
-        'manga-neon': '6px 6px 0 0 #FF2E63',
+        'manga-neon': '6px 6px 0 0 #DC143C',
         'manga-cyan': '6px 6px 0 0 #00E5FF',
-        'neon-pink': '0 0 20px rgba(255,46,99,0.5), 0 0 40px rgba(255,46,99,0.25)',
+        'neon-blood': '0 0 20px rgba(220,20,60,0.5), 0 0 40px rgba(220,20,60,0.25)',
         'neon-cyan': '0 0 20px rgba(0,229,255,0.5), 0 0 40px rgba(0,229,255,0.25)',
         'neon-gold': '0 0 20px rgba(255,210,63,0.45)',
       },
@@ -82,6 +92,10 @@ export default {
           '0%': { backgroundPosition: '0 0' },
           '100%': { backgroundPosition: '8px 8px' },
         },
+        'curse-aura': {
+          '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.06)' },
+        },
       },
       animation: {
         'speed-lines': 'speed-lines 1.6s ease-out forwards',
@@ -90,6 +104,7 @@ export default {
         'badge-burst': 'badge-burst 0.5s cubic-bezier(0.22,1,0.36,1) forwards',
         'marquee': 'marquee 24s linear infinite',
         'halftone-shift': 'halftone-shift 1.2s steps(4) infinite',
+        'curse-aura': 'curse-aura 3.2s ease-in-out infinite',
       },
       backgroundImage: {
         'halftone': "radial-gradient(circle, rgba(245,243,239,0.18) 1px, transparent 1.4px)",

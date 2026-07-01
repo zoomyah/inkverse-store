@@ -36,7 +36,7 @@ export function CartLineRow({ line, product }: CartLineRowProps) {
           <div className="min-w-0">
             <Badge tone="cyan">{product.series}</Badge>
             <Link to={`/product/${product.slug}`}>
-              <h3 className="font-sans font-700 text-sm text-ink-text mt-1.5 hover:text-sakura-neon transition-colors line-clamp-2">
+              <h3 className="font-sans font-700 text-sm text-ink-text mt-1.5 hover:text-blood-neon transition-colors line-clamp-2">
                 {product.name}
               </h3>
             </Link>
@@ -44,7 +44,7 @@ export function CartLineRow({ line, product }: CartLineRowProps) {
           <button
             onClick={() => remove(product.id)}
             aria-label="Remove"
-            className="p-1.5 text-ink-muted hover:text-sakura-neon hover:bg-white/5 transition-colors shrink-0"
+            className="p-1.5 text-ink-muted hover:text-blood-neon hover:bg-white/5 transition-colors shrink-0"
           >
             <Trash2 size={16} />
           </button>
@@ -56,7 +56,7 @@ export function CartLineRow({ line, product }: CartLineRowProps) {
             <button
               onClick={() => updateQty(product.id, line.quantity - 1)}
               aria-label="Decrease"
-              className="p-2 text-ink-muted hover:text-sakura-neon transition-colors"
+              className="p-2 text-ink-muted hover:text-blood-neon transition-colors"
             >
               <Minus size={14} />
             </button>
@@ -66,14 +66,14 @@ export function CartLineRow({ line, product }: CartLineRowProps) {
             <button
               onClick={() => updateQty(product.id, line.quantity + 1)}
               aria-label="Increase"
-              className="p-2 text-ink-muted hover:text-sakura-neon transition-colors"
+              className="p-2 text-ink-muted hover:text-blood-neon transition-colors"
             >
               <Plus size={14} />
             </button>
           </div>
 
           <div className="text-right">
-            <div className="font-mono text-base text-sakura-neon neon-text">
+            <div className="font-mono text-base text-blood-neon neon-text-blood">
               {formatCurrency(product.price * line.quantity)}
             </div>
             <div className="font-mono text-xs text-ink-muted">

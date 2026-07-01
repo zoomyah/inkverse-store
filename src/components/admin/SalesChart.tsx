@@ -28,7 +28,7 @@ export function SalesChart({ data }: SalesChartProps) {
         </div>
         <div className="flex gap-4 text-xs font-mono">
           <span className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-sakura-neon inline-block" /> Sales ($)
+            <span className="w-3 h-3 bg-blood-neon inline-block" /> Sales ($)
           </span>
           <span className="flex items-center gap-1.5">
             <span className="w-3 h-3 bg-cyan-neon inline-block" /> Orders
@@ -39,8 +39,8 @@ export function SalesChart({ data }: SalesChartProps) {
         <AreaChart data={data} margin={{ top: 6, right: 6, left: -18, bottom: 0 }}>
           <defs>
             <linearGradient id="salesGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#FF2E63" stopOpacity={0.55} />
-              <stop offset="100%" stopColor="#FF2E63" stopOpacity={0} />
+              <stop offset="0%" stopColor="#DC143C" stopOpacity={0.55} />
+              <stop offset="100%" stopColor="#DC143C" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="ordersGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#00E5FF" stopOpacity={0.4} />
@@ -76,7 +76,7 @@ export function SalesChart({ data }: SalesChartProps) {
           <Area
             type="monotone"
             dataKey="sales"
-            stroke="#FF2E63"
+            stroke="#DC143C"
             strokeWidth={2}
             fill="url(#salesGrad)"
           />

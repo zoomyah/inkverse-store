@@ -12,7 +12,7 @@ interface StatCardProps {
 }
 
 const toneRing = {
-  neon: "border-sakura-neon/40 text-sakura-neon",
+  neon: "border-blood-neon/40 text-blood-neon",
   cyan: "border-cyan-neon/40 text-cyan-neon",
   gold: "border-manga-gold/40 text-manga-gold",
 };
@@ -31,7 +31,7 @@ export function StatCard({ label, jp, value, delta, icon, tone = "neon" }: StatC
             <p
               className={cn(
                 "flex items-center gap-1 mt-2 text-xs font-mono",
-                up ? "text-cyan-neon" : "text-sakura-neon"
+                up ? "text-cyan-neon" : "text-blood-neon"
               )}
             >
               {up ? <TrendingUp size={13} /> : <TrendingDown size={13} />}

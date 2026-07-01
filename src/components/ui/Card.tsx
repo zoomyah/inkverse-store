@@ -18,7 +18,7 @@ export function Card({ children, className, variant = "default", hover = false }
         variant === "neon" && "shadow-manga-neon",
         variant === "cyan" && "shadow-manga-cyan",
         hover &&
-          "hover:-translate-y-1 hover:shadow-manga-neon hover:border-sakura-neon",
+          "hover:-translate-y-1 hover:shadow-manga-neon hover:border-blood-neon",
         className
       )}
     >

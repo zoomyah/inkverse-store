@@ -68,7 +68,7 @@ export function CartSummary({
 
       <div className="flex items-baseline justify-between border-t-2 border-black pt-4">
         <span className="katakana-eyebrow text-[11px] text-ink-muted">Total</span>
-        <span className="font-display text-3xl text-sakura-neon neon-text">
+        <span className="font-display text-3xl text-blood-neon neon-text-blood">
           {formatCurrency(b.total)}
         </span>
       </div>

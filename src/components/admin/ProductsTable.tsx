@@ -111,7 +111,7 @@ export function ProductsTable({ products, onChange }: ProductsTableProps) {
                 </td>
                 <td className="p-3 text-ink-muted capitalize">{p.category}</td>
                 <td className="p-3 text-cyan-neon">{p.series}</td>
-                <td className="p-3 text-right font-mono text-sakura-neon">
+                <td className="p-3 text-right font-mono text-blood-neon">
                   {formatCurrency(p.price)}
                 </td>
                 <td className="p-3 text-right font-mono text-ink-text">{p.stock}</td>
@@ -127,7 +127,7 @@ export function ProductsTable({ products, onChange }: ProductsTableProps) {
                     </button>
                     <button
                       onClick={() => del(p.id)}
-                      className="p-1.5 text-ink-muted hover:text-sakura-neon hover:bg-white/5"
+                      className="p-1.5 text-ink-muted hover:text-blood-neon hover:bg-white/5"
                       aria-label="Delete"
                     >
                       <Trash2 size={14} />
@@ -192,7 +192,7 @@ export function ProductsTable({ products, onChange }: ProductsTableProps) {
                 type="checkbox"
                 checked={form.featured}
                 onChange={(e) => f("featured", e.target.checked)}
-                className="accent-sakura-neon w-4 h-4"
+                className="accent-blood-neon w-4 h-4"
               />
               Featured
             </label>

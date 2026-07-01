@@ -26,7 +26,7 @@ export function MangaPanel({
         variant === "cyan" && "shadow-manga-cyan",
         rotate === "left" && "rotate-manga",
         rotate === "right" && "rotate-manga-r",
-        hover && "hover:-translate-y-1 hover:shadow-manga-neon hover:border-sakura-neon",
+        hover && "hover:-translate-y-1 hover:shadow-manga-neon hover:border-blood-neon",
         className
       )}
     >

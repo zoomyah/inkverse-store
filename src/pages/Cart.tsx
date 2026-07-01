@@ -62,7 +62,7 @@ export default function Cart() {
           ))}
           <Link
             to="/shop"
-            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-muted hover:text-sakura-neon mt-2 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-ink-muted hover:text-blood-neon mt-2 transition-colors"
           >
             ← Continue shopping
           </Link>

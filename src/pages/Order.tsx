@@ -63,7 +63,7 @@ export default function OrderPage() {
           transition={{ type: "spring", stiffness: 260, damping: 16, delay: 0.1 }}
           className="inline-flex p-3 manga-panel manga-panel-neon mb-4"
         >
-          <CheckCircle2 size={36} className="text-sakura-neon" />
+          <CheckCircle2 size={36} className="text-blood-neon" />
         </motion.div>
         <p className="font-jp text-cyan-neon text-xs neon-text-cyan">ご注文ありがとう</p>
         <h1 className="display-tight text-4xl sm:text-5xl uppercase mt-2">Order confirmed</h1>
@@ -71,7 +71,7 @@ export default function OrderPage() {
           Thanks, {order.customer.name.split(" ")[0]}! Your order is in the vault.
         </p>
         <div className="flex items-center justify-center gap-3 mt-4">
-          <span className="font-mono text-sakura-neon">{order.id}</span>
+          <span className="font-mono text-blood-neon">{order.id}</span>
           <Badge tone={statusTone[order.status]}>{order.status}</Badge>
         </div>
       </motion.div>
@@ -137,7 +137,7 @@ export default function OrderPage() {
         </ul>
         <div className="flex items-baseline justify-between border-t-2 border-black pt-4 mt-4">
           <span className="katakana-eyebrow text-[11px] text-ink-muted">Total paid</span>
-          <span className="font-display text-2xl text-sakura-neon neon-text">
+          <span className="font-display text-2xl text-blood-neon neon-text-blood">
             {formatCurrency(order.total)}
           </span>
         </div>

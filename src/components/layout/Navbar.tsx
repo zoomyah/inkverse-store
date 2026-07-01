@@ -48,7 +48,7 @@ export function Navbar() {
           <Link to="/" className="group flex items-center gap-2 shrink-0">
             <span className="display-tight text-2xl sm:text-3xl tracking-tight">
               <span className="text-ink-text">INK</span>
-              <span className="text-sakura-neon neon-text">VERSE</span>
+              <span className="text-blood-neon neon-text-blood">VERSE</span>
             </span>
             <span className="hidden sm:inline font-jp text-[10px] text-cyan-neon leading-none mt-1">
               インク
@@ -65,7 +65,7 @@ export function Navbar() {
                   cn(
                     "px-3 py-2 text-xs font-sans font-600 uppercase tracking-widest transition-colors",
                     isActive
-                      ? "text-sakura-neon"
+                      ? "text-blood-neon"
                       : "text-ink-muted hover:text-ink-text"
                   )
                 }
@@ -96,7 +96,7 @@ export function Navbar() {
             <Link
               to="/cart"
               aria-label="Cart"
-              className="relative p-2 text-ink-muted hover:text-sakura-neon transition-colors"
+              className="relative p-2 text-ink-muted hover:text-blood-neon transition-colors"
             >
               <ShoppingCart size={20} />
               <AnimatePresence>
@@ -107,7 +107,7 @@ export function Navbar() {
                     animate={{ scale: 1, rotate: 0 }}
                     exit={{ scale: 0 }}
                     onAnimationComplete={clearLastAdded}
-                    className="starburst absolute -top-1.5 -right-1.5 flex items-center justify-center bg-sakura-neon text-white font-display text-[9px]"
+                    className="starburst absolute -top-1.5 -right-1.5 flex items-center justify-center bg-blood-neon text-white font-display text-[9px]"
                     style={{ width: 22, height: 22 }}
                   >
                     {count > 9 ? "9+" : count}
@@ -119,7 +119,7 @@ export function Navbar() {
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
               aria-label="Menu"
-              className="lg:hidden p-2 text-ink-muted hover:text-sakura-neon transition-colors"
+              className="lg:hidden p-2 text-ink-muted hover:text-blood-neon transition-colors"
             >
               {mobileNavOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -170,7 +170,7 @@ export function Navbar() {
                     cn(
                       "px-3 py-3 text-sm font-sans font-600 uppercase tracking-widest border-l-2",
                       isActive
-                        ? "text-sakura-neon border-sakura-neon bg-white/5"
+                        ? "text-blood-neon border-blood-neon bg-white/5"
                         : "text-ink-muted border-transparent hover:text-ink-text"
                     )
                   }
@@ -212,7 +212,7 @@ export function Navbar() {
                 <Link
                   to="/login"
                   onClick={() => setMobileNavOpen(false)}
-                  className="px-3 py-3 text-sm uppercase tracking-widest text-sakura-neon"
+                  className="px-3 py-3 text-sm uppercase tracking-widest text-blood-neon"
                 >
                   Login / Register
                 </Link>

@@ -33,7 +33,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       className="group"
     >
       <Link to={`/product/${product.slug}`} className="block">
-        <div className="relative bg-ink-surface border-2 border-black shadow-manga transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-manga-neon group-hover:border-sakura-neon overflow-hidden">
+        <div className="relative bg-ink-surface border-2 border-black shadow-manga transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-manga-neon group-hover:border-blood-neon overflow-hidden">
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden bg-ink-deep">
             <img
@@ -55,9 +55,9 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               onClick={handleAdd}
               aria-label="Add to cart"
               className={cn(
-                "absolute bottom-3 right-3 p-2.5 bg-sakura-neon text-white border-2 border-black",
+                "absolute bottom-3 right-3 p-2.5 bg-blood-neon text-white border-2 border-black",
                 "opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0",
-                "shadow-manga-sm hover:bg-sakura-deep transition-all duration-200"
+                "shadow-manga-sm hover:bg-blood-deep transition-all duration-200"
               )}
             >
               <Plus size={16} />
@@ -76,7 +76,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               <span className="text-xs font-mono text-manga-gold">{product.rating.toFixed(1)}</span>
               <span className="text-xs text-ink-muted">({product.reviewsCount})</span>
               {product.stock <= 20 && (
-                <span className="ml-auto text-[10px] text-sakura-neon uppercase tracking-wider flex items-center gap-1">
+                <span className="ml-auto text-[10px] text-blood-neon uppercase tracking-wider flex items-center gap-1">
                   <Zap size={11} /> Low stock
                 </span>
               )}
@@ -85,7 +85,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               {product.name}
             </h3>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="font-mono text-lg text-sakura-neon neon-text">
+              <span className="font-mono text-lg text-blood-neon neon-text-blood">
                 {formatCurrency(product.price)}
               </span>
               {onSale && (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Star, Mail, ChevronRight } from "lucide-react";
 import { api } from "@/api/client";
-import { HERO_IMAGE, CATEGORY_IMAGES } from "@/data/images";
+import { CATEGORY_IMAGES } from "@/data/images";
 import type { CategoryInfo, Product } from "@/api/types";
 import { CATEGORY_LABELS } from "@/api/types";
 import { Container } from "@/components/ui/Container";
@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpeedLines } from "@/components/ui/SpeedLines";
 import { Halftone } from "@/components/ui/Halftone";
+import { KatanaScene } from "@/components/three/KatanaScene";
 import { ProductCard } from "@/components/product/ProductCard";
 import { BurstBadge } from "@/components/ui/BurstBadge";
 import { Badge } from "@/components/ui/Badge";
@@ -39,15 +40,9 @@ export default function Home() {
     <div>
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden border-b-2 border-black">
-        <div className="absolute inset-0">
-          <img
-            src={HERO_IMAGE}
-            alt="INKVERSE hero"
-            className="w-full h-full object-cover opacity-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-ink-base/70 via-ink-base/50 to-ink-deep/90" />
-        </div>
-        <SpeedLines tone="sakura" className="opacity-60 animate-speed-lines" />
+        <KatanaScene />
+        <div className="absolute inset-0 bg-gradient-to-br from-ink-base/70 via-ink-base/40 to-blood-deep/80" />
+        <SpeedLines tone="blood" className="opacity-60 animate-speed-lines" />
         <Halftone opacity={0.25} />
 
         <Container className="relative py-24 sm:py-32 lg:py-40">
@@ -59,7 +54,7 @@ export default function Home() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Badge tone="neon">
-                <Zap size={11} /> Manga Ink &amp; Neon
+                <Zap size={11} /> Crimson Curse
               </Badge>
               <span className="font-jp text-cyan-neon text-xs neon-text-cyan">
                 アニメ & マンガ マーケットプレース
@@ -72,7 +67,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="display-tight text-7xl sm:text-8xl lg:text-[9rem] leading-[0.82] text-ink-text text-stroke-ink"
             >
-              INK<span className="text-sakura-neon neon-text">VERSE</span>
+              INK<span className="text-blood-neon neon-text-blood">VERSE</span>
             </motion.h1>
 
             <motion.p
@@ -81,9 +76,9 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-6 text-lg sm:text-xl text-ink-muted max-w-xl leading-relaxed"
             >
-              A premium marketplace for anime &amp; manga devotees. Figures, manga,
-              apparel, posters, plushies &amp; accessories — curated for the otaku who
-              notices every detail.
+              Step into the crimson curse — a premium marketplace for anime &amp; manga
+              devotees. Figures, manga, apparel, posters, plushies &amp; accessories,
+              curated for the otaku who notices every detail.
             </motion.p>
 
             <motion.div
@@ -116,7 +111,7 @@ export default function Home() {
                 { n: "4.8★", l: "Avg rating" },
               ].map((s) => (
                 <div key={s.l}>
-                  <p className="display-tight text-3xl text-cyan-neon neon-text-cyan">{s.n}</p>
+                  <p className="display-tight text-3xl text-blood-neon neon-text-blood">{s.n}</p>
                   <p className="text-xs uppercase tracking-widest text-ink-muted">{s.l}</p>
                 </div>
               ))}
@@ -144,7 +139,7 @@ export default function Home() {
               transition={{ duration: 0.4, delay: i * 0.05 }}
             >
               <Link to={`/shop?category=${c.category}`} className="group block">
-                <div className="relative aspect-[4/5] overflow-hidden manga-panel hover:shadow-manga-neon hover:border-sakura-neon transition-all duration-200">
+                <div className="relative aspect-[4/5] overflow-hidden manga-panel hover:shadow-manga-neon hover:border-blood-neon transition-all duration-200">
                   <img
                     src={c.image || CATEGORY_IMAGES[c.category]}
                     alt={c.name}
@@ -159,7 +154,7 @@ export default function Home() {
                       {c.name}
                       <ChevronRight
                         size={22}
-                        className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-sakura-neon"
+                        className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-blood-neon"
                       />
                     </h3>
                   </div>
@@ -218,7 +213,7 @@ export default function Home() {
       {/* ===== SALE BANNER ===== */}
       <Container className="pb-16 sm:pb-24">
         <div className="relative overflow-hidden manga-panel manga-panel-neon p-8 sm:p-12">
-          <SpeedLines tone="sakura" className="opacity-40" />
+          <SpeedLines tone="blood" className="opacity-40" />
           <Halftone opacity={0.2} />
           <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -227,7 +222,7 @@ export default function Home() {
                 <span className="font-jp text-cyan-neon text-xs">セール中</span>
               </div>
               <h2 className="display-tight text-4xl sm:text-5xl uppercase text-ink-text">
-                Otaku sale — <span className="text-sakura-neon neon-text">20% off</span>
+                Otaku sale — <span className="text-blood-neon neon-text-blood">20% off</span>
               </h2>
               <p className="text-ink-muted mt-2 max-w-md">
                 Use code <span className="font-mono text-manga-gold">INKVERSE20</span> at
@@ -253,7 +248,7 @@ export default function Home() {
             <p className="font-jp text-cyan-neon text-xs mt-2 neon-text-cyan">オタククラブ</p>
             <p className="text-ink-muted mt-3">
               Early access to drops, restocks, and a 10% welcome code (
-              <span className="font-mono text-sakura-neon">OTAKU10</span>).
+              <span className="font-mono text-blood-neon">OTAKU10</span>).
             </p>
             {subscribed ? (
               <div className="mt-6 manga-panel manga-panel-cyan p-4">
@@ -272,7 +267,7 @@ export default function Home() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
-                    className="w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 pl-10 pr-3 py-3 text-sm focus:outline-none focus:border-sakura-neon"
+                    className="w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 pl-10 pr-3 py-3 text-sm focus:outline-none focus:border-blood-neon"
                   />
                 </div>
                 <Button type="submit">Subscribe</Button>

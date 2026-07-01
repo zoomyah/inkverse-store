@@ -22,7 +22,7 @@ export function Steps({ current }: { current: Step }) {
                 className={cn(
                   "flex items-center justify-center w-8 h-8 border-2 border-black font-display text-sm transition-colors",
                   done && "bg-cyan-neon text-black",
-                  active && "bg-sakura-neon text-white shadow-neon-pink",
+                  active && "bg-blood-neon text-white shadow-neon-blood",
                   !done && !active && "bg-ink-deep text-ink-muted"
                 )}
               >
@@ -32,7 +32,7 @@ export function Steps({ current }: { current: Step }) {
                 <p
                   className={cn(
                     "text-xs uppercase tracking-widest",
-                    active ? "text-sakura-neon" : done ? "text-cyan-neon" : "text-ink-muted"
+                    active ? "text-blood-neon" : done ? "text-cyan-neon" : "text-ink-muted"
                   )}
                 >
                   {s.label}

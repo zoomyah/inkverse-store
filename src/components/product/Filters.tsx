@@ -53,11 +53,11 @@ export function Filters({
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <SlidersHorizontal size={16} className="text-sakura-neon" />
+          <SlidersHorizontal size={16} className="text-blood-neon" />
           <h3 className="katakana-eyebrow text-[11px] text-ink-muted">Filters</h3>
         </div>
         {asDrawer && (
-          <button onClick={onClose} className="text-ink-muted hover:text-sakura-neon">
+          <button onClick={onClose} className="text-ink-muted hover:text-blood-neon">
             <X size={18} />
           </button>
         )}
@@ -70,7 +70,7 @@ export function Filters({
           value={value.search ?? ""}
           onChange={(e) => set({ search: e.target.value })}
           placeholder="Search…"
-          className="w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:border-sakura-neon"
+          className="w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:border-blood-neon"
         />
       </div>
 
@@ -83,7 +83,7 @@ export function Filters({
             className={cn(
               "px-3 py-1.5 text-xs uppercase tracking-wider border-2 border-black transition-colors",
               !value.category
-                ? "bg-sakura-neon text-white"
+                ? "bg-blood-neon text-white"
                 : "bg-ink-deep text-ink-muted hover:text-ink-text"
             )}
           >
@@ -96,7 +96,7 @@ export function Filters({
               className={cn(
                 "px-3 py-1.5 text-xs uppercase tracking-wider border-2 border-black transition-colors",
                 value.category === c
-                  ? "bg-sakura-neon text-white"
+                  ? "bg-blood-neon text-white"
                   : "bg-ink-deep text-ink-muted hover:text-ink-text"
               )}
             >

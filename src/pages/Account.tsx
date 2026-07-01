@@ -50,7 +50,7 @@ export default function Account() {
     <Container className="py-10 sm:py-14">
       <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
         <div>
-          <p className="katakana-eyebrow text-[11px] text-sakura-neon">Account</p>
+          <p className="katakana-eyebrow text-[11px] text-blood-neon">Account</p>
           <h1 className="display-tight text-4xl uppercase mt-1">Welcome, {user.name}</h1>
           <p className="text-ink-muted text-sm mt-1">{user.email}</p>
         </div>
@@ -89,7 +89,7 @@ export default function Account() {
             <Link
               key={o.id}
               to={`/order/${o.id}`}
-              className="block manga-panel p-4 hover:border-sakura-neon hover:shadow-manga-neon transition-all"
+              className="block manga-panel p-4 hover:border-blood-neon hover:shadow-manga-neon transition-all"
             >
               <div className="flex items-center justify-between gap-4 flex-wrap">
                 <div className="flex items-center gap-4">
@@ -104,7 +104,7 @@ export default function Account() {
                     ))}
                   </div>
                   <div>
-                    <p className="font-mono text-sm text-sakura-neon">{o.id}</p>
+                    <p className="font-mono text-sm text-blood-neon">{o.id}</p>
                     <p className="text-xs text-ink-muted">{formatDate(o.createdAt)}</p>
                   </div>
                 </div>

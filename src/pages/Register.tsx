@@ -65,7 +65,7 @@ export default function Register() {
               required
             />
             {msg && (
-              <p className={msg.ok ? "text-xs text-cyan-neon" : "text-xs text-sakura-neon"}>
+              <p className={msg.ok ? "text-xs text-cyan-neon" : "text-xs text-blood-neon"}>
                 {msg.message}
               </p>
             )}
@@ -76,7 +76,7 @@ export default function Register() {
 
           <p className="text-center text-sm text-ink-muted mt-6">
             Already a member?{" "}
-            <Link to="/login" className="text-sakura-neon hover:underline">
+            <Link to="/login" className="text-blood-neon hover:underline">
               Sign in
             </Link>
           </p>

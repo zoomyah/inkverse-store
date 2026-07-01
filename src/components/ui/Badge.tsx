@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type BadgeTone = "neon" | "cyan" | "gold" | "muted";
 
 const tones: Record<BadgeTone, string> = {
-  neon: "bg-sakura-neon/15 text-sakura-neon border-sakura-neon/40",
+  neon: "bg-blood-neon/15 text-blood-neon border-blood-neon/40",
   cyan: "bg-cyan-neon/15 text-cyan-neon border-cyan-neon/40",
   gold: "bg-manga-gold/15 text-manga-gold border-manga-gold/40",
   muted: "bg-white/5 text-ink-muted border-white/10",

@@ -108,7 +108,7 @@ export default function Admin() {
             {orders.slice(0, 5).map((o) => (
               <li key={o.id} className="flex items-center justify-between text-sm py-2 border-b border-white/5">
                 <div>
-                  <p className="font-mono text-sakura-neon">{o.id}</p>
+                  <p className="font-mono text-blood-neon">{o.id}</p>
                   <p className="text-xs text-ink-muted">{o.customer.name}</p>
                 </div>
                 <div className="text-right">
@@ -130,7 +130,7 @@ export default function Admin() {
               .map((p) => (
                 <li key={p.id} className="flex items-center justify-between text-sm py-2 border-b border-white/5">
                   <span className="text-ink-text truncate">{p.name}</span>
-                  <span className={"font-mono " + (p.stock <= 10 ? "text-sakura-neon" : "text-manga-gold")}>
+                  <span className={"font-mono " + (p.stock <= 10 ? "text-blood-neon" : "text-manga-gold")}>
                     {p.stock} left
                   </span>
                 </li>

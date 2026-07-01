@@ -8,7 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const fieldClasses =
-  "w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 px-4 py-3 font-sans text-sm focus:outline-none focus:border-sakura-neon focus:shadow-neon-pink transition-colors";
+  "w-full bg-ink-deep border-2 border-black text-ink-text placeholder:text-ink-muted/60 px-4 py-3 font-sans text-sm focus:outline-none focus:border-blood-neon focus:shadow-neon-blood transition-colors";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   { label, hint, error, className, id, ...props },
@@ -23,11 +23,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       <input
         ref={ref}
         id={inputId}
-        className={cn(fieldClasses, error && "border-sakura-neon", className)}
+        className={cn(fieldClasses, error && "border-blood-neon", className)}
         {...props}
       />
       {error ? (
-        <span className="text-xs text-sakura-neon">{error}</span>
+        <span className="text-xs text-blood-neon">{error}</span>
       ) : (
         hint && <span className="text-xs text-ink-muted">{hint}</span>
       )}
@@ -53,10 +53,10 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
       <textarea
         ref={ref}
         id={inputId}
-        className={cn(fieldClasses, "min-h-[96px] resize-y", error && "border-sakura-neon", className)}
+        className={cn(fieldClasses, "min-h-[96px] resize-y", error && "border-blood-neon", className)}
         {...props}
       />
-      {error && <span className="text-xs text-sakura-neon">{error}</span>}
+      {error && <span className="text-xs text-blood-neon">{error}</span>}
     </label>
   );
 });

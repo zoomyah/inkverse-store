@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 interface SpeedLinesProps {
-  tone?: "white" | "sakura";
+  tone?: "white" | "blood";
   className?: string;
   /** Inline style overrides (positioning). */
   style?: React.CSSProperties;
@@ -14,7 +14,7 @@ export function SpeedLines({ tone = "white", className, style }: SpeedLinesProps
       aria-hidden
       className={cn(
         "pointer-events-none absolute inset-0 speed-lines",
-        tone === "sakura" && "speed-lines-sakura",
+        tone === "blood" && "speed-lines-blood",
         className
       )}
       style={style}
